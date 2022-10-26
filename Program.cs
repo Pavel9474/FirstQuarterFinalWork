@@ -13,6 +13,20 @@ string[] GetStringArrayFromConsole()
     }
     return strarr;
 }
+string[] GetStringArrayShorterByN(string[] arr, int N)
+{
+    int count = 0;
+    string[] array2= new string[arr.Length];
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length<=N)
+        {
+            array2[count]=arr[i];
+            count++;
+        }
+    }
+    return array2;
+}
 void PrintArray(string[] arr)
 {
     for(int i = 0; i < arr.GetLength(0); i++)
@@ -27,3 +41,5 @@ int GetNumberFromConsole(string text)
 string[] arr1 = GetStringArrayFromConsole();
 PrintArray(arr1);
 int N=GetNumberFromConsole("Введите максимальное количество символов массива 2");
+GetStringArrayShorterByN(arr1, N);
+PrintArray(GetStringArrayShorterByN(arr1, N));
