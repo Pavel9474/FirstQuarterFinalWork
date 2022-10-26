@@ -13,3 +13,17 @@ string[] GetStringArrayFromConsole()
     }
     return strarr;
 }
+void PrintArray(string[] arr)
+{
+    for(int i = 0; i < arr.GetLength(0); i++)
+            Console.Write(arr[i] + " ");
+    Console.WriteLine();
+}
+int GetNumberFromConsole(string text)
+{
+    Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
+string[] arr1 = GetStringArrayFromConsole();
+PrintArray(arr1);
+int N=GetNumberFromConsole("Введите максимальное количество символов массива 2");
